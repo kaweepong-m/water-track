@@ -9,6 +9,7 @@ import Admin from '../view/Admin.vue'
 import Reward from '../view/Reward.vue'
 import History from '../view/History.vue'
 import Leaderboard from '../view/Leaderboard.vue'
+import Addreward from '../view/Addreward.vue'
 
 
 
@@ -59,6 +60,11 @@ const routes = [
     path: '/leaderboard',
     name: 'Leaderboard',
     component: Leaderboard
+  },
+  {
+    path: '/addreward',
+    name: 'Addreward',
+    component: Addreward
   }
   
 ]

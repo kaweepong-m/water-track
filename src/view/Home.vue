@@ -1,7 +1,7 @@
 <template>
   <div class="container my-5">
     <div class="row">
-      <div class="col-3">
+      <div class="col-3"> <!-- loop -->
         <p style="font-size: 64px">💧</p>
         <p>8/7/2021</p>
       </div>
