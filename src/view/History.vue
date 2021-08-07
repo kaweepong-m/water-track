@@ -1,5 +1,6 @@
 <template>
-  <div class="container my-3">
+  <div>
+    <div class="container my-3">
     <h1 class="display-4">History</h1>
     <table class="table my-3">
       <thead>
@@ -17,6 +18,7 @@
         </tr>
       </tbody>
     </table>
+  </div>
   </div>
 </template>
 

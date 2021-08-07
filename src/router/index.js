@@ -8,6 +8,8 @@ import Landing from '../view/Landing.vue'
 import Admin from '../view/Admin.vue'
 import Reward from '../view/Reward.vue'
 import History from '../view/History.vue'
+import Leaderboard from '../view/Leaderboard.vue'
+
 
 
 Vue.use(VueRouter)
@@ -52,6 +54,11 @@ const routes = [
     path: '/history',
     name: 'History',
     component: History
+  },
+  {
+    path: '/leaderboard',
+    name: 'Leaderboard',
+    component: Leaderboard
   }
   
 ]

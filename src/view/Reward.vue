@@ -1,50 +1,59 @@
 <template>
-  <div class="container my-3">
-    <h1 class="display-4">Reward</h1>
-    <table class="table my-3">
-      <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Price</th>
-          <th scope="col">Desc</th>
-          <th scope="col">#</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="reward in data" :key="reward.id">
-          <td>{{reward.name}}</td>
-          <td>{{reward.price}}</td>
-          <td>{{reward.desc}}</td>
-          <td>
-              <button class = "btn btn-success">
-                  แลก
-              </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div>
+    <div class="container my-3">
+      <h1 class="display-4">Reward</h1>
+      <table class="table my-3">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">#####</th>
+            <th scope="col">Admin</th>
+            <th scope="col">Admin</th>
+            <th scope="col">Admin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="reward in data" :key="reward.id">
+            <td>{{ reward.name }}</td>
+            <td>{{ reward.price }}</td>
+            <td>{{ reward.desc }}</td>
+            <td>
+              <button class="btn btn-success">แลก</button>
+            </td>
+            <td>
+              <button class="btn btn-success">เพิ่ม</button>
+            </td>
+            <td>
+              <button class="btn btn-warning">แก้ไข</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">ลบ</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
 export default {
-  methods:{
-
-  },
-  created(){
+  methods: {},
+  created() {
     axios.get("http://localhost:1337/water-rewards").then((res) => {
-      this.data = res.data
+      this.data = res.data;
       console.log(this.data);
-    })
+    });
   },
-  data(){
+  data() {
     return {
-      data:[]
+      data: [],
     };
-  }
-
-}
+  },
+};
 </script>
 
 <style>
